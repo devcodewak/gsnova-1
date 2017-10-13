@@ -13,8 +13,7 @@ RUN \
     && chgrp -R 0 /gsnova \
     && chmod -R g+rwX /gsnova \
     && echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf \
-    && echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf \
-    && /sbin/sysctl -p
+    && echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf 
     
 ADD server.json /gsnova/server.json
 
