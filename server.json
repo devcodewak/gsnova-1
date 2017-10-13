@@ -1,0 +1,16 @@
+{
+	"AdminListen": "127.0.0.1:60000",
+	"DialTimeout": 15,
+	"UDPReadTimeout": 30,
+	"AllowedUser":["*", "gsnova"],
+	"Cipher":{"Key": "809240d3a021449f6e67aa73221d42df942a308a"},
+	"HTTP":{
+		"Listen": ":8080"
+	},
+	"HTTP2":{
+		"Listen": ":8088",
+		"Key": "",
+		"Cert": ""
+	},
+	"Log": ["stdout"]
+}
