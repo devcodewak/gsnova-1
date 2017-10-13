@@ -3,10 +3,10 @@ FROM debian:latest
 ENV VER=0.28.0 
 
 RUN \
-    apt-get -qq -y install curl \
+    apt-get -y update \
     && mkdir -m 777 /gsnova \
     && cd /gsnova \
-    && curl -fSL https://github.com/yinqiwen/gsnova/releases/download/v$VER/gsnova_server_linux_amd64-v$VER.tar.bz2 | tar xj  \
+    && wget https://github.com/yinqiwen/gsnova/releases/download/v$VER/gsnova_server_linux_amd64-v$VER.tar.bz2 | tar xj  \
     && rm -rf server.json \
     && rm -rf gsnova_server_linux_amd64-v$VER.tar.bz2 \
     && chgrp -R 0 /gsnova \
