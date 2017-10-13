@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:9.2
 
 ENV VER=0.28.0 
 
