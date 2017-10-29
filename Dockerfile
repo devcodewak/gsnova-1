@@ -1,6 +1,6 @@
 FROM debian:9.2
 
-ENV VER=0.28.0 
+ENV VER=0.29.0 
 
 RUN \
     apt-get -y update \
@@ -11,9 +11,7 @@ RUN \
     && rm -rf server.json \
     && rm -rf gsnova_server_linux_amd64-v$VER.tar.bz2 \
     && chgrp -R 0 /gsnova \
-    && chmod -R g+rwX /gsnova \
-    && echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf \
-    && echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf 
+    && chmod -R g+rwX /gsnova 
     
 ADD server.json /gsnova/server.json
 
